@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7256B6CE2C4F01CF00D76E78 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B6CD2C4F01CF00D76E78 /* HeaderView.swift */; };
+		7256B6D02C4F01E100D76E78 /* BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B6CF2C4F01E100D76E78 /* BodyView.swift */; };
+		7256B6D22C4F01F400D76E78 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B6D12C4F01F400D76E78 /* FooterView.swift */; };
+		7256B6D42C4F020C00D76E78 /* ContentViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B6D32C4F020C00D76E78 /* ContentViewBuilder.swift */; };
+		7256B6D62C4F022100D76E78 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B6D52C4F022100D76E78 /* ContentViewModel.swift */; };
 		725A793F2C4EE4A7004EE8AD /* ObservableViewModelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A793E2C4EE4A7004EE8AD /* ObservableViewModelApp.swift */; };
 		725A79412C4EE4A7004EE8AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725A79402C4EE4A7004EE8AD /* ContentView.swift */; };
 		725A79432C4EE4A8004EE8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725A79422C4EE4A8004EE8AD /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7256B6CD2C4F01CF00D76E78 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		7256B6CF2C4F01E100D76E78 /* BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyView.swift; sourceTree = "<group>"; };
+		7256B6D12C4F01F400D76E78 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		7256B6D32C4F020C00D76E78 /* ContentViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewBuilder.swift; sourceTree = "<group>"; };
+		7256B6D52C4F022100D76E78 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		725A793B2C4EE4A7004EE8AD /* ObservableViewModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObservableViewModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725A793E2C4EE4A7004EE8AD /* ObservableViewModelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewModelApp.swift; sourceTree = "<group>"; };
 		725A79402C4EE4A7004EE8AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7256B6D72C4F024400D76E78 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				725A79402C4EE4A7004EE8AD /* ContentView.swift */,
+				7256B6D52C4F022100D76E78 /* ContentViewModel.swift */,
+				7256B6D32C4F020C00D76E78 /* ContentViewBuilder.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
 		725A79322C4EE4A7004EE8AD = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				725A793E2C4EE4A7004EE8AD /* ObservableViewModelApp.swift */,
-				725A79402C4EE4A7004EE8AD /* ContentView.swift */,
+				7256B6D72C4F024400D76E78 /* Container */,
+				7256B6CD2C4F01CF00D76E78 /* HeaderView.swift */,
+				7256B6CF2C4F01E100D76E78 /* BodyView.swift */,
+				7256B6D12C4F01F400D76E78 /* FooterView.swift */,
 				725A79422C4EE4A8004EE8AD /* Assets.xcassets */,
 				725A79442C4EE4A8004EE8AD /* Preview Content */,
 			);
@@ -137,7 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7256B6D42C4F020C00D76E78 /* ContentViewBuilder.swift in Sources */,
 				725A79412C4EE4A7004EE8AD /* ContentView.swift in Sources */,
+				7256B6CE2C4F01CF00D76E78 /* HeaderView.swift in Sources */,
+				7256B6D62C4F022100D76E78 /* ContentViewModel.swift in Sources */,
+				7256B6D02C4F01E100D76E78 /* BodyView.swift in Sources */,
+				7256B6D22C4F01F400D76E78 /* FooterView.swift in Sources */,
 				725A793F2C4EE4A7004EE8AD /* ObservableViewModelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
