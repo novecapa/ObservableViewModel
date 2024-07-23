@@ -20,16 +20,30 @@ struct ContentView: View {
                     }, label: {
                         Text(contentViewModel.buttonHeaderTitle)
                             .bold()
+                            .foregroundColor(.white)
+                            .padding(6)
+                            .background(.pink)
+                            .cornerRadius(6)
                     })
                     Button(action: {
                         contentViewModel.counter += 1
                     }, label: {
                         Text("Update counter x1")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(6)
+                            .background(.pink)
+                            .cornerRadius(6)
                     })
                     Button(action: {
                         contentViewModel.nameFooter = "Footer name"
                     }, label: {
                         Text("Add Footer title")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding(6)
+                            .background(.pink)
+                            .cornerRadius(6)
                     })
                 }
                 .frame(height: 60)
