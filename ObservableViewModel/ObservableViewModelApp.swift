@@ -11,7 +11,7 @@ import SwiftUI
 struct ObservableViewModelApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentViewBuilder().build()
+            ContainerViewBuilder().build()
         }
     }
 }

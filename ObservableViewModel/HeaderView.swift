@@ -9,11 +9,11 @@ import SwiftUI
 
 struct HeaderView: View {
     
-    @Environment(ContentViewModel.self) var contentViewModel: ContentViewModel
+    @EnvironmentObject var containerViewModel: ContainerViewModel
     
     var body: some View {
         VStack {
-            Text("Header: \(contentViewModel.nameHeader)")
+            Text("User: \(containerViewModel.user?.name ?? "")")
                 .font(.title)
         }
     }

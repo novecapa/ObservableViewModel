@@ -9,17 +9,32 @@ import SwiftUI
 
 struct BodyView: View {
     
-    @Environment(ContentViewModel.self) var contentViewModel: ContentViewModel
+    @EnvironmentObject var containerViewModel: ContainerViewModel
     
     var body: some View {
         VStack {
-            Text("Body: \(contentViewModel.counter)")
-                .font(.title)
-            Button(action: {
-                contentViewModel.counter += 10
-            }, label: {
-                Text("Update counter x10")
-            })
+            if case let .loaded(loadStatus) = containerViewModel.status {
+                loadedView(status: loadStatus)
+            } else {
+                loadingView()
+            }
+        }
+    }
+}
+// MARK: Private methods
+private extension BodyView {
+    func loadingView() -> some View {
+        ProgressView()
+    }
+    
+    func loadedView(status: ContainerViewModel.LoadedStatus) -> some View {
+        List {
+            ForEach(status.result, id: \.id) { user in
+                Text(user.name)
+                    .onTapGesture {
+                        containerViewModel.actionHandler(.userTapped(user))
+                    }
+            }
         }
     }
 }

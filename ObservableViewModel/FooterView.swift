@@ -9,16 +9,14 @@ import SwiftUI
 
 struct FooterView: View {
     
-    @Environment(ContentViewModel.self) var contentViewModel: ContentViewModel
+    @EnvironmentObject var containerViewModel: ContainerViewModel
     
     var body: some View {
         VStack {
-            Text("Footer: \(contentViewModel.nameFooter)")
-                .font(.title)
             Button(action: {
-                contentViewModel.buttonHeaderTitle = "no title"
+                containerViewModel.actionHandler(.resetHeader)
             }, label: {
-                Text("Update header button title")
+                Text("Reset title")
             })
         }
     }
